@@ -1,0 +1,41 @@
+.listSection {
+    width: 600px;
+    
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.unblockIngredients {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: scroll;
+    max-height: 912px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+
+}

@@ -1,0 +1,9 @@
+.menu {
+    width: 600px;
+}
+
+.menuList {
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: scroll;
+}

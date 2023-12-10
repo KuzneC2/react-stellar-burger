@@ -35,5 +35,4 @@ function IngredientDetails({ ingredientData }) {
 IngredientDetails.propTypes = {
     ingredientData: ingredientPropType,
 }
-
 export default IngredientDetails

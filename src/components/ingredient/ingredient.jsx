@@ -1,11 +1,16 @@
 import styles from "./ingredient.module.css";
 import { Counter, CurrencyIcon } from "@ya.praktikum/react-developer-burger-ui-components";
-// import { ingredientPropType } from "../../utils/prop-types"
+import {ingredientPropType} from "../../utils/prop-types"
+import PropTypes from "prop-types";
 
-export default function Ingredient({ data }) {
+function Ingredient({ data, openDetails }) {
+    const onClick = () => {
+        openDetails(data)
+    }
+
     return (
         <li>
-            <div className={`${styles.ingredient}`}>
+            <div className={`${styles.ingredient}`} onClick={onClick}>
                 <img src={data.image} alt={`Изображение: ${data.name}`} className={`${styles.image} ml-4 mr-4`} />
                 <div className={`${styles.price} mt-2 mb-2`}>
                     <p className={"text text_type_digits-default mr-3"}>{data.price}</p>
@@ -18,6 +23,9 @@ export default function Ingredient({ data }) {
     )
 }
 
-// Ingredient.propTypes = {
-//     data: ingredientPropType.isRequired
-// }
+Ingredient.propTypes = {
+    data: ingredientPropType.isRequired,
+    openDetails: PropTypes.func.isRequired
+}
+
+export default Ingredient;

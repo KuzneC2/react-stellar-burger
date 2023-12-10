@@ -1,14 +1,16 @@
-import React, { useMemo } from "react"
+import { useMemo } from "react"
 import styles from './burger-constructor.module.css'
 import { ConstructorElement, DragIcon, CurrencyIcon, Button } from "@ya.praktikum/react-developer-burger-ui-components"
-// import PropTypes from "prop-types";
+import Modal from "../modal/modal"
+import { OrderDetails } from "../order-details/order-detals"
+import { ingredientPropType } from "../../utils/prop-types"
+import PropTypes from "prop-types";
 
-function BurgerConstructor({ data }) {
+function BurgerConstructor({ data, openModal, closeModal, modalState }) {
     const { bun, ingredients } = useMemo(() => ({
         bun: data.find(item => item.type === 'bun'),
         ingredients: data.filter(item => item.type !== 'bun')
     }), [data])
-
 
     return (
         <section className={`${styles.listSection} mt-25 ml-10`}>
@@ -52,9 +54,15 @@ function BurgerConstructor({ data }) {
                         <p className={"text text_type_digits-medium"}>610</p>
                         <CurrencyIcon type="primary" />
                     </div>
-                    <Button htmlType="submit" type="primary" size="large">
+                    <Button htmlType="submit" type="primary" size="large" onClick={openModal}>
                         Оформить заказ
                     </Button>
+                    {
+                        modalState.isOpen &&
+                        <Modal handleModalClose={closeModal}>
+                            <OrderDetails />
+                        </Modal>
+                    }
                 </div>
             </div>
 
@@ -62,9 +70,11 @@ function BurgerConstructor({ data }) {
     )
 }
 
-// BurgerConstructor.propTypes = {
-//     data: PropTypes.arrayOf(ingredientPropType.isRequired).isRequired
-// };
-
+BurgerConstructor.propTypes = {
+    data: PropTypes.arrayOf(ingredientPropType.isRequired).isRequired,
+    openModal: PropTypes.func.isRequired,
+    closeModal: PropTypes.func.isRequired,
+    modalState: PropTypes.object.isRequired,
+};
 
 export default BurgerConstructor

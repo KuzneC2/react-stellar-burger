@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./filter-menu.module.css";
 import { Tab } from "@ya.praktikum/react-developer-burger-ui-components";
 

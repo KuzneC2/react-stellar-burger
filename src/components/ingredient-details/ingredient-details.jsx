@@ -6,7 +6,6 @@ function IngredientDetails({ ingredientData }) {
     const { image_large, name, calories, proteins, fat, carbohydrates } = ingredientData;
     return (
         <div className={`${styles.container}`}>
-            <h2 className={`${styles.title}`}>Детали ингредиента</h2>
             <img className={`${styles.image}`} src={`${image_large}`} alt={name} />
             <h3 className={'text text_type_main-medium mb-8'}>{name}</h3>
             <div className={`${styles.table}`}>

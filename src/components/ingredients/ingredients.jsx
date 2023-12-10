@@ -1,7 +1,7 @@
 import styles from "./ingrediens.module.css"
 import React, { useMemo } from "react";
 import PropTypes from "prop-types";
-import { ingredientPropType } from "../../utils/prop-types"
+// import { ingredientPropType } from "../../utils/prop-types"
 import FilterMenu from "../tab/filter-menu"
 import IngredientsBurger from "../ingredients-burger/ingredients-burger";
 
@@ -11,7 +11,6 @@ export default function BurgerIngredients({ data }) {
     const buns = useMemo(() => data.filter(item => item.type === "bun"), [data]);
     const mains = useMemo(() => data.filter(item => item.type === "main"), [data]);
     const sauces = useMemo(() => data.filter(item => item.type === "sauce"), [data]);
-    console.log(data)
 
     return (
         <section className={styles.menu}>
@@ -26,6 +25,6 @@ export default function BurgerIngredients({ data }) {
     )
 }
 
-BurgerIngredients.propTypes = {
-    data: PropTypes.arrayOf(ingredientPropType.isRequired).isRequired
-}
+// BurgerIngredients.propTypes = {
+//     data: PropTypes.arrayOf(ingredientPropType.isRequired).isRequired
+// }

@@ -1,7 +1,7 @@
 import React, { useMemo } from "react"
 import styles from './burger-constructor.module.css'
 import { ConstructorElement, DragIcon, CurrencyIcon, Button } from "@ya.praktikum/react-developer-burger-ui-components"
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 function BurgerConstructor({ data }) {
     const { bun, ingredients } = useMemo(() => ({

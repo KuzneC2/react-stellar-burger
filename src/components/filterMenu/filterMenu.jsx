@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./filter-menu.module.css";
+import styles from "./filterMenu.module.css"
 import { Tab } from "@ya.praktikum/react-developer-burger-ui-components";
 
 export default function FilterMenu() {

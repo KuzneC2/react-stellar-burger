@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './nav-item.module.css'
+import styles from './navItem.module.css'
 import PropTypes from "prop-types"
 
 function NavItem({ Icon, navName, className }) {

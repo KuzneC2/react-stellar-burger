@@ -1,9 +1,9 @@
-import styles from "./ingrediens.module.css"
+import styles from "./burgerIngrediens.module.css"
 import { useMemo } from "react";
 import PropTypes from "prop-types";
-import {ingredientPropType} from "../../utils/prop-types"
-import FilterMenu from "../tab/filter-menu"
-import IngredientsBurger from "../ingredients-burger/ingredients-burger";
+import { ingredientPropType } from "../../utils/prop-types"
+import FilterMenu from "../filterMenu/filterMenu";
+import IngredientsBurger from "../ingredientsBurger/ingredientsBurger";
 import Modal from "../modal/modal";
 import IngredientDetails from "../ingredient-details/ingredient-details";
 

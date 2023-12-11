@@ -7,3 +7,4 @@ export const gettingApiItems = async () => {
     const res = await fetch(`${url}`)
     return testApi(res)
 }
+

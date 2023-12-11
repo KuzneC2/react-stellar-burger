@@ -1,8 +1,8 @@
 import { useMemo } from "react"
-import styles from './burger-constructor.module.css'
+import styles from './burgerConstructor.module.css'
 import { ConstructorElement, DragIcon, CurrencyIcon, Button } from "@ya.praktikum/react-developer-burger-ui-components"
 import Modal from "../modal/modal"
-import { OrderDetails } from "../order-details/order-detals"
+import { OrderDetails } from "../orderDetails/orderDetals"
 import { ingredientPropType } from "../../utils/prop-types"
 import PropTypes from "prop-types";
 

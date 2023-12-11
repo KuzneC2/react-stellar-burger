@@ -1,4 +1,4 @@
-import styles from "./ingredients-burger.module.css"
+import styles from "./ingredientsBurger.module.css"
 import Ingredient from "../ingredient/ingredient";
 import { ingredientPropType } from "../../utils/prop-types"
 import PropTypes from "prop-types";

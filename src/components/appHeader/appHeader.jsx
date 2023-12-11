@@ -1,6 +1,6 @@
-import styles from './header.module.css'
+import styles from './appHeader.module.css'
 import { Logo, BurgerIcon, ListIcon, ProfileIcon } from "@ya.praktikum/react-developer-burger-ui-components";
-import NavItem from '../nav-item/nav-item';
+import NavItem from '../navItem/navItem';
 
 function AppHeader() {
     return (

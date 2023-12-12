@@ -5,7 +5,7 @@ import { ingredientPropType } from "../../utils/prop-types"
 import FilterMenu from "../filterMenu/filterMenu";
 import IngredientsBurger from "../ingredientsBurger/ingredientsBurger";
 import Modal from "../modal/modal";
-import IngredientDetails from "../ingredient-details/ingredient-details";
+import IngredientDetails from "../ingredientDetails/ingredientDetails";
 
 function BurgerIngredients({ data, openModal, closeModal, modalState }) {
     const buns = useMemo(() => data.filter(item => item.type === "bun"), [data]);
